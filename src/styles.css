@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Meera+Inimai&display=swap');
+
+:root {
+    --colorTitles: #000;
+    --colorHover: #6f1d1b;
+}
+
+body {
+    background-color: #D4A373;
+}
