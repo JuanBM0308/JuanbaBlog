@@ -1,18 +1,68 @@
 nav {
     background-color: #FEFAE0;
+    height: 6rem;
+    display: flex;
+    background: rgba(30, 30, 30, 0.85);
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    border-radius: 15px;
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+/* Efectos al moverse up down */
+nav.scrolled {
+    background: rgba(40, 40, 40, 0.9);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+    transform: translateX(-50%) translateY(-5px);
+}
+
+#myProfile {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#imageProfile {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 5%;
+    border-radius: 100px;
+    object-fit: cover;
+    border: 2px solid #6b705c;
+    transition: transform 0.3s ease;
+}
+
+#nameProfile {
+    color: #ffff;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    font-family: "Pixelify Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
 }
 
 #containerLinks {
-    width: 80%;
-    height: 5rem;
+    width: 70%;
     display: flex;
     justify-content: center;
 }
 
 #principalLinks {
     width: 50%;
-    height: 5rem;
-    font-family: "Meera Inimai", serif;
+    font-family: "Pixelify Sans", serif;
+    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-size: large;
