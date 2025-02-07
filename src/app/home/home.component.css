@@ -1,102 +1,94 @@
 nav {
-    background-color: #FEFAE0;
-    height: 6rem;
-    display: flex;
-    background: rgba(30, 30, 30, 0.85);
-    height: 5rem;
+    margin-top: 1rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
-    border-radius: 15px;
-    position: fixed;
-    top: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 95%;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
-    transition: all 0.3s ease-in-out;
-    z-index: 1000;
 }
 
-/* Efectos al moverse up down */
 nav.scrolled {
-    background: rgba(40, 40, 40, 0.9);
-    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
-    transform: translateX(-50%) translateY(-5px);
+    background-color: #111;
+    box-shadow: 2px 2px 0px #000, 4px 4px 0px #FFD700;
 }
 
-#myProfile {
+#myProfile  {
     width: 30%;
+    height: 5rem;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 #imageProfile {
-    width: 3.5rem;
-    height: 3.5rem;
-    margin: 5%;
-    border-radius: 100px;
-    object-fit: cover;
-    border: 2px solid #6b705c;
-    transition: transform 0.3s ease;
+    width: 4rem;
+    height: 4rem;
+    margin: 1rem;
+    image-rendering: pixelated;
+    border: 4px solid #FFD700;
+    transition: transform 0.2s;
+}
+
+#imageProfile:hover {
+    transform: scale(1.1);
 }
 
 #nameProfile {
-    color: #ffff;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    font-family: "Pixelify Sans", serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
+    color: #FFD700;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-family: "Pixelify Sans", sans-serif;
+    text-shadow: 3px 3px 0px black;
+    float: right;
 }
 
 #containerLinks {
     width: 70%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
 }
 
 #principalLinks {
-    width: 50%;
-    font-family: "Pixelify Sans", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: large;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    width: 50%;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 1.2rem;
 }
 
 .linkNav {
     position: relative;
-    color: var(--colorTitles);
+    padding: 8px 15px;
+    background-color: #222;
+    border: 4px solid #FFD700;
     text-decoration: none;
+    text-transform: uppercase;
+    color: #FFD700;
+    box-shadow: 2px 2px 0px black;
+    transition: all 0.2s;
 }
 
 .linkNav a {
     color: inherit;
+    text-decoration: none;
 }
 
 .linkNav:hover {
-    color: var(--colorHover);
+    background-color: #FFD700;
+    color: #222;
+    box-shadow: 4px 4px 0px black;
 }
 
-.linkNav::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -5px;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, #641220, #6e1423, #85182a, #a11d33, #a71e34, #b21e35, #bd1f36, #c71f37, #e01e37);
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
+@keyframes glitch {
+    0% { transform: translate(0, 0); }
+    20% { transform: translate(-0.6px, 0.6px); }
+    40% { transform: translate(0.6px, -0.6px); }
+    60% { transform: translate(-0.6px, 0.6px); }
+    80% { transform: translate(0.6px, -0.6px); }
+    100% { transform: translate(0, 0); }
 }
 
-.linkNav:hover::after {
-    width: 100%;
+.linkNav:hover {
+    animation: glitch 0.2s infinite;
 }
