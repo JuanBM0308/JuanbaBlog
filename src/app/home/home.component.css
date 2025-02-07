@@ -1,5 +1,4 @@
 nav {
-    margin-top: 1rem;
     display: flex;
     justify-content: space-between;
 }
@@ -10,8 +9,8 @@ nav.scrolled {
 }
 
 #myProfile  {
-    width: 30%;
-    height: 5rem;
+    width: 25%;
+    height: 5.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,6 +23,7 @@ nav.scrolled {
     image-rendering: pixelated;
     border: 4px solid #FFD700;
     transition: transform 0.2s;
+    user-select: none;
 }
 
 #imageProfile:hover {
@@ -40,10 +40,10 @@ nav.scrolled {
 }
 
 #containerLinks {
-    width: 70%;
+    width: 65%;
     display: flex;
     justify-content: flex-end;
-    height: 5rem;
+    height: 5.5rem;
     display: flex;
     align-items: center;
     padding: 0 2rem;
@@ -59,7 +59,7 @@ nav.scrolled {
 
 .linkNav {
     position: relative;
-    padding: 8px 15px;
+    padding: 0.5rem 0.9rem;
     background-color: #222;
     border: 4px solid #FFD700;
     text-decoration: none;
@@ -91,4 +91,78 @@ nav.scrolled {
 
 .linkNav:hover {
     animation: glitch 0.2s infinite;
+}
+
+#hamburgerMenu {
+    font-family: "Pixelify Sans", sans-serif;
+    display: none;
+    align-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #FFD700;
+    text-align: center;
+    user-select: none;
+}
+
+@media (max-width: 1600px) {
+    #hamburgerMenu {
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-shadow: 3px 3px 0px black;
+    }
+
+    #containerLinks {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        margin-top: 18rem;
+    }
+
+    #containerLinks ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* Mostrar cuando `menuOpen` está activo */
+    .show-menu {
+        display: flex !important;
+    }
+
+    /* Ocultar cuando `menuOpen` está desactivado */
+    .hide-menu {
+        display: none !important;
+    }
+}
+
+@media (min-width: 1601px) {
+    #hamburgerMenu {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    #imageProfile {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    #myProfile {
+        width: 100%;
+    }
+
+    #hamburgerMenu {
+        width: 97%;
+        height: 5.5rem;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
 }

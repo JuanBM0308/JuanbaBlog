@@ -1,10 +1,13 @@
 <header>
     <nav>
         <div id="myProfile">
-            <a href="www.linkedin.com/in/juanbamo" target="_blank"><img id="imageProfile" src="../../assets/iconPixelArt.png" alt="imageProfile"></a>
+            <a href="https://www.linkedin.com/in/juanbamo" target="_blank"><img id="imageProfile" src="../../assets/iconPixelArt.png" alt="imageProfile"></a>
             <h2 id="nameProfile">Juan Barbosa</h2>
         </div>
-        <div id="containerLinks">
+        <div id="hamburgerMenu" (click)="toggleMenu()">
+            ☰
+        </div>
+        <div id="containerLinks" [ngClass]="{'show-menu': menuOpen, 'hide-menu': !menuOpen}">
             <ul id="principalLinks">
                 <li class="linkNav"><a href="">Home</a></li>
                 <li class="linkNav"><a href="">About-Me</a></li>
