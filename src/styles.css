@@ -1,11 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --colorTitles: #ffff;
-    --colorHover: #E9E8E8;
+    /**
+    * TODO: Fonts
+    */
+    --fontTitlesPixel: "Pixelify Sans", sans-serif;
+    --fontNormalTitles: "Roboto Mono", serif;
+
+    /**
+    * TODO: Colors
+    */
+    --colorTitles: #E0DED5;
+    --secodaryColor: #3A506B;
+    --detailsColor: #5C7A99;
+    --highlightColor: #4A90E2;
+    --normalText: #C8C6C3;
 }
 
 body {
-    background-color: #313131;
+    background-color: #1E1E1E ;
 }
