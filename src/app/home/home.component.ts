@@ -15,26 +15,32 @@ export class HomeComponent {
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
     const menu = this.el.nativeElement.querySelector('#containerLinks');
-
-    if (!this.menuOpen) {
-      // Cerrar el menú con la animación de subida
-      this.renderer.removeClass(menu, 'show-menu');
+  
+    if (this.menuOpen) {
+      // Mostrar el menú
+      this.renderer.setStyle(menu, 'display', 'flex');
+      this.renderer.addClass(menu, 'show-menu');
+      this.renderer.removeClass(menu, 'hide-menu');
+    } else {
+      // Ocultar el menú con una animación de cierre
       this.renderer.addClass(menu, 'hide-menu');
-
-      // Esperar que termine la animación antes de ocultar el menú
+      this.renderer.removeClass(menu, 'show-menu');
+  
       setTimeout(() => {
         this.renderer.setStyle(menu, 'display', 'none');
-      }, 300); // Ajusta este tiempo si la animación dura más
-
-    } else {
-      // Mostrar el menú con la animación de caída
-      this.renderer.setStyle(menu, 'display', 'flex');
-      this.renderer.removeClass(menu, 'hide-menu');
-      this.renderer.addClass(menu, 'show-menu');
+      }); // Ajusta el tiempo según la animación
     }
-
-    // Cambiar el estado del menú
-    this.menuOpen = !this.menuOpen;
   }
+  
+  /**
+  * TODO: Reprodución de sonido navbar
+  */
+  playSound(): void {
+    let audio = new Audio('../../assets/soundClickRetroCoin.mp3');
+    audio.preload = 'auto'; 
+    audio.play().catch(error => console.log("Error al reproducir el sonido:", error));
+  }  
+
 }

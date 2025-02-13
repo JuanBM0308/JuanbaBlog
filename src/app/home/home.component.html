@@ -1,3 +1,4 @@
+
 <header>
     <nav>
         <div id="myProfile">
@@ -5,14 +6,17 @@
             <h2 id="nameProfile">Juan Barbosa</h2>
         </div>
         <div id="hamburgerMenu" (click)="toggleMenu()">
-            ☰
+            <span class="material-symbols-outlined">
+                {{ menuOpen ? 'close' : 'menu' }}
+            </span>
         </div>
+        
         <div id="containerLinks" [ngClass]="{'show-menu': menuOpen, 'hide-menu': !menuOpen}">
             <ul id="principalLinks">
-                <a href=""><li class="linkNav">Home</li></a>
-                <a href=""><li class="linkNav">About-Me</li></a>
-                <a href=""><li class="linkNav">Projects</li></a>
-                <a href=""><li class="linkNav">Experience</li></a>
+                <a href="" src="../../assets/soundClickRetroCoin.mp3" (click)="playSound()"><li class="linkNav">Home</li></a>
+                <a href="" (click)="playSound()"><li class="linkNav">About-Me</li></a>
+                <a href="" (click)="playSound()"><li class="linkNav">Projects</li></a>
+                <a href="" (click)="playSound()"><li class="linkNav">Experience</li></a>
             </ul>
         </div>
     </nav>
@@ -30,10 +34,16 @@
             </div>
             <div id="subWelcome">
                 <p>
-                    /I hope you love this website
+                    / I hope you love this website
                 </p>
             </div>
         </div>
         <hr class="divisorLine">
+    </section>
+    <section id="containerAbout">
+        <div id="aboutProject">
+            <p>Here, you’ll get to know more about me, my projects, and the technologies I work with. As a software developer, I love building innovative solutions and tackling new challenges.</p>
+            <p>Feel free to explore my portfolio to check out my projects, the technologies I specialize in, and my experience in the development world. I hope you find something interesting <a href=""><br>let’s connect!</a></p>
+        </div>
     </section>
 </main>
