@@ -13,12 +13,12 @@
         
         <div id="containerLinks" [ngClass]="{'show-menu': menuOpen, 'hide-menu': !menuOpen}">
             <ul id="principalLinks">
-                <a href="" src="../../assets/soundClickRetroCoin.mp3" (click)="playSound()"><li class="linkNav">Home</li></a>
-                <a href="" (click)="playSound()"><li class="linkNav">About-Me</li></a>
-                <a href="" (click)="playSound()"><li class="linkNav">Projects</li></a>
-                <a href="" (click)="playSound()"><li class="linkNav">Experience</li></a>
+                <a href="#" class="audioClick" (click)="playSound($event)"><li class="linkNav">Home</li></a>
+                <a href="#" class="audioClick" (click)="playSound($event)"><li class="linkNav">About-Me</li></a>
+                <a href="#" class="audioClick" (click)="playSound($event)"><li class="linkNav">Projects</li></a>
+                <a href="#" class="audioClick" (click)="playSound($event)"><li class="linkNav">Experience</li></a>
             </ul>
-        </div>
+        </div>        
     </nav>
 </header>
 <main>
@@ -38,12 +38,19 @@
                 </p>
             </div>
         </div>
-        <hr class="divisorLine">
+        <div class="divisorLine"></div>
     </section>
     <section id="containerAbout">
         <div id="aboutProject">
             <p>Here, you’ll get to know more about me, my projects, and the technologies I work with. As a software developer, I love building innovative solutions and tackling new challenges.</p>
-            <p>Feel free to explore my portfolio to check out my projects, the technologies I specialize in, and my experience in the development world. I hope you find something interesting <a href=""><br>let’s connect!</a></p>
-        </div>
+            <p>Feel free to explore my portfolio to check out my projects, the technologies I specialize in, and my experience in the development world. I hope you find something interesting 
+                <a href="#" id="letsConnect">
+                    <br><span class="hoverHighlighted">let’s connect!</span>
+                </a>
+            </p>            
+        </div>        
     </section>
 </main>
+<footer>
+    gh
+</footer>

@@ -30,17 +30,16 @@ export class HomeComponent {
   
       setTimeout(() => {
         this.renderer.setStyle(menu, 'display', 'none');
-      }); // Ajusta el tiempo según la animación
+      }); // Ajusta el tiempo segun la animación
     }
   }
   
   /**
   * TODO: Reprodución de sonido navbar
   */
-  playSound(): void {
-    let audio = new Audio('../../assets/soundClickRetroCoin.mp3');
-    audio.preload = 'auto'; 
-    audio.play().catch(error => console.log("Error al reproducir el sonido:", error));
+  playSound(event: Event): void {
+    let audio = new Audio('assets/soundClickRetroCoin.mp3');
+    audio.play().catch(error => console.error("Error reproduciendo el sonido:", error));
   }  
 
 }

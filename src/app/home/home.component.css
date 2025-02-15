@@ -1,5 +1,5 @@
 /**
-* ? Estilos navbar
+* ! Estilos navbar
 */
 nav {
     display: flex;
@@ -36,6 +36,14 @@ nav {
     font-family: var(--fontTitlesPixel);
     text-shadow: 3px 3px 0px black;
     float: right;
+}
+
+#containerLinks li {
+    list-style-type: none;
+}
+
+#containerLinks a {
+    text-decoration: none;
 }
 
 #containerLinks {
@@ -153,7 +161,7 @@ nav {
 }
 
 /**
-* ? Estilos Main
+* ! Estilos Main
 */
 section {
     margin: 2rem;
@@ -190,11 +198,6 @@ section {
     color: var(--normalText);
 }
 
-hr {
-    color: var(--colorTitles);
-    margin-top: 0.5rem;
-}
-
 @media (max-width: 977px) {
     #subWelcome {
         display: none;
@@ -207,8 +210,14 @@ hr {
     }
 }
 
+.divisorLine {
+    width: auto;
+    background-color: var(--colorTitles);
+    height: 1px;
+}
+
 /**
-* ? Estilos descripcion del proyecto
+* ! Estilos descripcion del proyecto
 */
 #containerAbout {
     display: flex;
@@ -230,3 +239,47 @@ hr {
     font-size: 36px;
     color: var(--highlightColor);
 }
+
+/** 
+* ? Estilo barra progresiva (resalta texto)
+*/
+#letsConnect {
+    color: var(--normalText);
+}
+
+.hoverHighlighted {
+    position: relative;
+    display: inline-block;
+}
+
+.hoverHighlighted::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1rem;
+    background-color: var(--secodaryColor);
+    z-index: -1;
+}
+
+.hoverHighlighted::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1rem; 
+    background-color: var(--highlightColor); 
+    transition: width 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.hoverHighlighted:hover::after {
+    width: 100%;
+    background-color: var(--highlightColor); 
+}
+
+/**
+* ! Estilos footer
+*/
