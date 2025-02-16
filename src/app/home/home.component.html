@@ -2,7 +2,7 @@
 <header>
     <nav>
         <div id="myProfile">
-            <a href="https://www.linkedin.com/in/juanbamo" target="_blank"><img id="imageProfile" src="../../assets/iconPixelArt.png" alt="imageProfile"></a>
+            <a href="https://www.linkedin.com/in/juanbamo" target="_blank"><img id="imageProfile" src="../../assets/images/iconPixelArt.png" alt="imageProfile"></a>
             <h2 id="nameProfile">Juan Barbosa</h2>
         </div>
         <div id="hamburgerMenu" (click)="toggleMenu()">
@@ -10,7 +10,6 @@
                 {{ menuOpen ? 'close' : 'menu' }}
             </span>
         </div>
-        
         <div id="containerLinks" [ngClass]="{'show-menu': menuOpen, 'hide-menu': !menuOpen}">
             <ul id="principalLinks">
                 <a href="#" class="audioClick" (click)="playSound($event)"><li class="linkNav">Home</li></a>
@@ -42,7 +41,7 @@
     </section>
     <section id="containerAbout">
         <div id="aboutProject">
-            <p>Here, you’ll get to know more about me, my projects, and the technologies I work with. As a software developer, I love building innovative solutions and tackling new challenges.</p>
+            <p>Here you can learn more about me, my projects, the technologies I work with and the latest technology news. As a software developer, I love creating innovative solutions and taking on new challenges.</p>
             <p>Feel free to explore my portfolio to check out my projects, the technologies I specialize in, and my experience in the development world. I hope you find something interesting 
                 <a href="#" id="letsConnect">
                     <br><span class="hoverHighlighted">let’s connect!</span>
@@ -50,7 +49,67 @@
             </p>            
         </div>        
     </section>
+    <section id="softwareNews">
+        <h2 id="titleNews">Software technology news</h2>
+        <div id="newsContainer">
+            <div class="container">
+                <section class="mx-auto my-5" style="max-width: 23rem;">              
+                  <div class="card">
+                    <div class="card-body d-flex flex-row">
+                      <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" class="rounded-circle me-3" height="50px"
+                        width="50px" alt="avatar" />
+                      <div>
+                        <h5 class="card-title font-weight-bold mb-2">New spicy meals</h5>
+                        <p class="card-text"><i class="far fa-clock pe-2"></i>07/24/2018</p>
+                      </div>
+                    </div>
+                    <div class="bg-image hover-overlay ripple rounded-0" data-mdb-ripple-color="light">
+                      <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/full page/2.jpg"
+                        alt="Card image cap" />
+                      <a href="#!">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                      </a>
+                    </div>
+                    <div class="card-body">
+                      <p class="card-text collapse" id="collapseContent">
+                        Recently, we added several exotic new dishes to our restaurant menu. They come from
+                        countries such as Mexico, Argentina, and Spain. Come to us, have some wine and enjoy
+                        our juicy meals from around the world.
+                      </p>
+                      <div class="d-flex justify-content-between">
+                        <a class="btn btn-link link-danger p-md-1 my-1" data-mdb-toggle="collapse" href="#collapseContent"
+                          role="button" aria-expanded="false" aria-controls="collapseContent">Read more</a>
+                        <div>
+                            <i class="bi bi-share-fill"></i>
+                            <i class="bi bi-heart-fill"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>                  
+                </section>
+            </div>
+        </div>
+    </section>
 </main>
-<footer>
-    gh
+<footer class="footer">
+    <div class="footerContainer">
+        <ul class="socialLinks">
+            <li>
+                <a href="https://www.linkedin.com/in/juanbamo" target="_blank">
+                    <img class="socialIcon" src="../../assets/images/linkedinPixelLogo.png" alt="LinkedIn">
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/JuanBM0308" target="_blank">
+                    <img class="socialIcon" src="../../assets/images/gitHubPixelLogo.png" alt="GitHub">
+                </a>
+            </li>
+            <li>
+                <a [href]="email">
+                    <img class="socialIcon" src="../../assets/images/gmailPixelLogo.png" alt="Email">
+                </a>
+            </li>
+        </ul>
+        <p class="footerText">© 2025 Juan Barbosa | All Rights Reserved</p>
+    </div>
 </footer>

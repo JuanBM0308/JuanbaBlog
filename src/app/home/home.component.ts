@@ -1,4 +1,4 @@
-import { Component, ElementRef, Renderer2 } from '@angular/core';
+import { Component, ElementRef, Renderer2, ViewChild  } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -38,8 +38,18 @@ export class HomeComponent {
   * TODO: Reprodución de sonido navbar
   */
   playSound(event: Event): void {
-    let audio = new Audio('assets/soundClickRetroCoin.mp3');
+    let audio = new Audio('assets/sounds/soundClickRetroCoin.mp3');
     audio.play().catch(error => console.error("Error reproduciendo el sonido:", error));
   }  
 
+  /**
+  * TODO: Evitar spam correo
+  */
+  public email: string = '';
+
+  ngOnInit(): void {
+    const user: string = "portelnom0308";
+    const domain: string = "gmail.com";
+    this.email = `mailto:${user}@${domain}`;
+  }
 }

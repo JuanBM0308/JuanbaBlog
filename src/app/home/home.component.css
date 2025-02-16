@@ -7,6 +7,14 @@ nav {
     z-index: 2;
 }
 
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
 #myProfile  {
     width: 25%;
     height: 5.5rem;
@@ -38,14 +46,6 @@ nav {
     float: right;
 }
 
-#containerLinks li {
-    list-style-type: none;
-}
-
-#containerLinks a {
-    text-decoration: none;
-}
-
 #containerLinks {
     width: 90%;
     display: flex;
@@ -55,6 +55,7 @@ nav {
     align-items: center;
     padding: 0 2rem;
     user-select: none;
+    z-index: 1;
 }
 
 #principalLinks {
@@ -94,7 +95,7 @@ nav {
         justify-content: center;
         align-items: center;
         text-shadow: 3px 3px 0px black;
-        z-index: 1;
+        z-index: 3;
     }
 
     #containerLinks {
@@ -222,7 +223,6 @@ section {
 #containerAbout {
     display: flex;
     justify-content: center;
-    height: auto;
 }
 
 #aboutProject p {
@@ -281,5 +281,65 @@ section {
 }
 
 /**
+* ? Noticias de software
+*/
+#titleNews {
+    color: var(--colorTitles);
+    font-size: 1.5rem;
+    font-family: var(--fontNormalTitles);
+    margin-top: 3rem;
+    color: #00A8E8; /* Azul Neón */
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.bi-share-fill:hover {
+    color: #0d47a1 !important;
+}
+  
+.bi-heart-fill:hover {
+    color: #f44336 !important;
+}
+
+/**
 * ! Estilos footer
 */
+.footer {
+    background: linear-gradient(90deg, #1e1e1e, #222, #222, #222, #222, #222, #1e1e1e);
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.footerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.socialLinks {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+}
+
+.socialLinks li {
+    display: inline-block;
+}
+
+.socialIcon {
+    width: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.socialIcon:hover {
+    transform: scale(1.2);
+}
+
+.footerText {
+    font-size: 14px;
+    opacity: 0.8;
+}
