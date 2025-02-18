@@ -40,7 +40,20 @@ export class HomeComponent {
   playSound(event: Event): void {
     let audio = new Audio('assets/sounds/soundClickRetroCoin.mp3');
     audio.play().catch(error => console.error("Error reproduciendo el sonido:", error));
-  }  
+  }
+
+  /**
+  * TODO: Mantener color like/love
+  */
+  holdColor(): void {
+    const heartIcon = document.getElementById('heart-icon');
+
+    if (heartIcon?.classList.contains("liked")) {
+        heartIcon.classList.remove("liked");
+    } else {
+        heartIcon?.classList.add("liked");
+    }
+  }
 
   /**
   * TODO: Evitar spam correo

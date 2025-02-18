@@ -89,6 +89,10 @@ li {
 }
 
 @media (max-width: 1218px) {
+    body {
+        background-color: red;
+    }
+
     #hamburgerMenu {
         width: 10%;
         display: flex;
@@ -106,6 +110,7 @@ li {
         position: absolute;
         height: 100vh;
         background-color: var(--secodaryColor);
+        z-index: 2;
     }
 
     #containerLinks.show-menu {
@@ -228,7 +233,7 @@ section {
 #aboutProject p {
     margin: 1rem;
     color: var(--normalText);
-    font-family: "Poppins", serif;
+    font-family: var(--fontNormalText);
     font-weight: 400;
     font-style: normal;
     font-size: x-large;
@@ -245,6 +250,10 @@ section {
 */
 #letsConnect {
     color: var(--normalText);
+}
+
+#letsConnect:hover {
+    color: var(--colorTitles);
 }
 
 .hoverHighlighted {
@@ -283,22 +292,124 @@ section {
 /**
 * ? Noticias de software
 */
+#softwareNews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
 #titleNews {
     color: var(--colorTitles);
     font-size: 1.5rem;
     font-family: var(--fontNormalTitles);
     margin-top: 3rem;
-    color: #00A8E8; /* Azul Neón */
-    font-weight: bold;
+    color: var(--highlightColor);
+    font-weight: 300;
     letter-spacing: 1px;
 }
 
-.bi-share-fill:hover {
-    color: #0d47a1 !important;
+#newsContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    width: 90%;
 }
-  
-.bi-heart-fill:hover {
-    color: #f44336 !important;
+
+.newsCard {
+    border-radius: 0.5rem;
+    width: 20rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.newsLink {
+    width: 20rem;
+    height: 20rem;
+}
+
+.newsCard:hover {
+    transform: scale(1.05);
+}
+
+.newsTitle {
+    color: var(--colorSubTitles);
+    font-family: var(--fontNormalText);
+    margin: 0.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.newsImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.loveContainer {
+    display: flex;
+    margin: 0.5rem;
+    position: absolute;
+    bottom: 0;
+}
+
+.heartIcon {
+    color: #fff;
+    font-size: 1.5rem;
+    width: auto;
+    cursor: pointer;
+    user-select: none;
+    z-index: 1;
+}
+
+.liked {
+    color: red !important;
+}
+
+.loveCounter {
+    color: #fff;
+    font-size: 1rem;
+    margin-left: 0.2rem;
+    font-family: var(--fontNormalText);
+}
+
+@media (max-width: 1500px) {
+    #newsContainer {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1183px) {
+    .newsCard {
+        width: 30rem;
+    }
+
+    .newsLink {
+        width: 30rem;
+    }
+}
+
+@media (max-width: 1165px) {
+    .newsCard {
+        width: 100%;
+    }
+
+    .newsLink {
+        width: 100%;
+    }
 }
 
 /**

@@ -9,6 +9,7 @@
     */
     --fontTitlesPixel: "Pixelify Sans", sans-serif;
     --fontNormalTitles: "Roboto Mono", serif;
+    --fontNormalText: "Poppins", serif;
 
     /**
     * TODO: Colors
@@ -19,9 +20,9 @@
     --highlightColor: #4A90E2;
     --normalText: #C8C6C3;
     --colorBehind: #818a91;
-    --colorSubTitles: ;
+    --colorSubTitles: #F5F5F5;
 }
 
 body {
-    background-color: #1E1E1E ;
+    background-color: #1E1E1E;
 }
