@@ -26,3 +26,10 @@
 body {
     background-color: #1E1E1E;
 }
+
+.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+    touch-action: none;
+    overscroll-behavior: contain;
+}

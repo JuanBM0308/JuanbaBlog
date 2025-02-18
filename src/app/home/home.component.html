@@ -1,4 +1,3 @@
-
 <header>
     <nav>
         <div id="myProfile">
@@ -10,7 +9,7 @@
                 {{ menuOpen ? 'close' : 'menu' }}
             </span>
         </div>
-        <div id="containerLinks" [ngClass]="{'show-menu': menuOpen, 'hide-menu': !menuOpen}">
+        <div id="containerLinks" [ngClass]="{'show-menu': menuOpen, 'hide-menu': !menuOpen}" [class.active]="menuOpen">
             <ul id="principalLinks">
                 <a href="#" class="audioClick" (click)="playSound($event)"><li class="linkNav">Home</li></a>
                 <a href="#" class="audioClick" (click)="playSound($event)"><li class="linkNav">About-Me</li></a>
@@ -52,117 +51,19 @@
     <section id="softwareNews">
         <h2 id="titleNews">Software technology news</h2>
         <div id="newsContainer">
-            <div class="newsCard">
-                <a class="newsLink" target="_blank" href="https://www.eleconomista.com.mx/empresas/nvidia-cierra-adquisicion-run-ai-700-millones-dolares-revision-regulador-20241230-740016.html#:~:text=La%20Comisi%C3%B3n%20Europea%20aprob%C3%B3%20sin,la%20autorizaci%C3%B3n%20antimonopolio%20del%20bloque.">
-                    <h4 class="newsTitle">Nvidia adquiere Run:ai por $700 millones</h4>
-                    <img class="newsImage" src="../../assets/images/nvidia.jpg" alt="nvidiaCompany">
-                    <div class="loveContainer">
-                        <span (click)="holdColor()" id="heart-icon" class="material-icons-outlined heartIcon" translate="no">
-                            favorite
-                        </span>
-                        <p class="loveCounter">
-                            0
-                        </p>
-                    </div>
+            <div class="newsCard" *ngFor="let article of news;  let i = index">
+                <h4 class="newsTitle">{{ article.title | slice:0:50 }}...</h4>
+                <a class="newsLink" [href]="article.url" target="_blank">
+                    <img class="newsImage" [src]="article.urlToImage" alt="newsImage">
                 </a>
-            </div>
-            <div class="newsCard">
-                <a class="newsLink" target="_blank" href="https://www.eleconomista.com.mx/empresas/nvidia-cierra-adquisicion-run-ai-700-millones-dolares-revision-regulador-20241230-740016.html#:~:text=La%20Comisi%C3%B3n%20Europea%20aprob%C3%B3%20sin,la%20autorizaci%C3%B3n%20antimonopolio%20del%20bloque.">
-                    <h4 class="newsTitle">Nvidia adquiere Run:ai por $700 millones</h4>
-                    <img class="newsImage" src="../../assets/images/nvidia.jpg" alt="nvidiaCompany">
-                    <div class="loveContainer">
-                        <span (click)="holdColor()" id="heart-icon" class="material-icons-outlined heartIcon" translate="no">
-                            favorite
-                        </span>
-                        <p class="loveCounter">
-                            0
-                        </p>
-                    </div>
-                </a>
-            </div>
-            <div class="newsCard">
-                <a class="newsLink" target="_blank" href="https://www.eleconomista.com.mx/empresas/nvidia-cierra-adquisicion-run-ai-700-millones-dolares-revision-regulador-20241230-740016.html#:~:text=La%20Comisi%C3%B3n%20Europea%20aprob%C3%B3%20sin,la%20autorizaci%C3%B3n%20antimonopolio%20del%20bloque.">
-                    <h4 class="newsTitle">Nvidia adquiere Run:ai por $700 millones</h4>
-                    <img class="newsImage" src="../../assets/images/nvidia.jpg" alt="nvidiaCompany">
-                    <div class="loveContainer">
-                        <span (click)="holdColor()" id="heart-icon" class="material-icons-outlined heartIcon" translate="no">
-                            favorite
-                        </span>
-                        <p class="loveCounter">
-                            0
-                        </p>
-                    </div>
-                </a>
-            </div>
-            <div class="newsCard">
-                <a class="newsLink" target="_blank" href="https://www.eleconomista.com.mx/empresas/nvidia-cierra-adquisicion-run-ai-700-millones-dolares-revision-regulador-20241230-740016.html#:~:text=La%20Comisi%C3%B3n%20Europea%20aprob%C3%B3%20sin,la%20autorizaci%C3%B3n%20antimonopolio%20del%20bloque.">
-                    <h4 class="newsTitle">Nvidia adquiere Run:ai por $700 millones</h4>
-                    <img class="newsImage" src="../../assets/images/nvidia.jpg" alt="nvidiaCompany">
-                    <div class="loveContainer">
-                        <span (click)="holdColor()" id="heart-icon" class="material-icons-outlined heartIcon" translate="no">
-                            favorite
-                        </span>
-                        <p class="loveCounter">
-                            0
-                        </p>
-                    </div>
-                </a>
-            </div>
-            <div class="newsCard">
-                <a class="newsLink" target="_blank" href="https://www.eleconomista.com.mx/empresas/nvidia-cierra-adquisicion-run-ai-700-millones-dolares-revision-regulador-20241230-740016.html#:~:text=La%20Comisi%C3%B3n%20Europea%20aprob%C3%B3%20sin,la%20autorizaci%C3%B3n%20antimonopolio%20del%20bloque.">
-                    <h4 class="newsTitle">Nvidia adquiere Run:ai por $700 millones</h4>
-                    <img class="newsImage" src="../../assets/images/nvidia.jpg" alt="nvidiaCompany">
-                    <div class="loveContainer">
-                        <span (click)="holdColor()" id="heart-icon" class="material-icons-outlined heartIcon" translate="no">
-                            favorite
-                        </span>
-                        <p class="loveCounter">
-                            0
-                        </p>
-                    </div>
-                </a>
-            </div>
-            <div class="newsCard">
-                <a class="newsLink" target="_blank" href="https://www.eleconomista.com.mx/empresas/nvidia-cierra-adquisicion-run-ai-700-millones-dolares-revision-regulador-20241230-740016.html#:~:text=La%20Comisi%C3%B3n%20Europea%20aprob%C3%B3%20sin,la%20autorizaci%C3%B3n%20antimonopolio%20del%20bloque.">
-                    <h4 class="newsTitle">Nvidia adquiere Run:ai por $700 millones</h4>
-                    <img class="newsImage" src="../../assets/images/nvidia.jpg" alt="nvidiaCompany">
-                    <div class="loveContainer">
-                        <span (click)="holdColor()" id="heart-icon" class="material-icons-outlined heartIcon" translate="no">
-                            favorite
-                        </span>
-                        <p class="loveCounter">
-                            0
-                        </p>
-                    </div>
-                </a>
-            </div>
-            <div class="newsCard">
-                <a class="newsLink" target="_blank" href="https://www.eleconomista.com.mx/empresas/nvidia-cierra-adquisicion-run-ai-700-millones-dolares-revision-regulador-20241230-740016.html#:~:text=La%20Comisi%C3%B3n%20Europea%20aprob%C3%B3%20sin,la%20autorizaci%C3%B3n%20antimonopolio%20del%20bloque.">
-                    <h4 class="newsTitle">Nvidia adquiere Run:ai por $700 millones</h4>
-                    <img class="newsImage" src="../../assets/images/nvidia.jpg" alt="nvidiaCompany">
-                    <div class="loveContainer">
-                        <span (click)="holdColor()" id="heart-icon" class="material-icons-outlined heartIcon" translate="no">
-                            favorite
-                        </span>
-                        <p class="loveCounter">
-                            0
-                        </p>
-                    </div>
-                </a>
-            </div>
-            <div class="newsCard">
-                <a class="newsLink" target="_blank" href="https://www.eleconomista.com.mx/empresas/nvidia-cierra-adquisicion-run-ai-700-millones-dolares-revision-regulador-20241230-740016.html#:~:text=La%20Comisi%C3%B3n%20Europea%20aprob%C3%B3%20sin,la%20autorizaci%C3%B3n%20antimonopolio%20del%20bloque.">
-                    <h4 class="newsTitle">Nvidia adquiere Run:ai por $700 millones</h4>
-                    <img class="newsImage" src="../../assets/images/nvidia.jpg" alt="nvidiaCompany">
-                    <div class="loveContainer">
-                        <span (click)="holdColor()" id="heart-icon" class="material-icons-outlined heartIcon" translate="no">
-                            favorite
-                        </span>
-                        <p class="loveCounter">
-                            0
-                        </p>
-                    </div>
-                </a>
+                <div class="loveContainer">
+                    <span (click)="holdColor(i)" [class.liked]="article.liked" class="material-icons-outlined heartIcon" translate="no">
+                        favorite
+                    </span>
+                    <p class="loveCounter">
+                        0
+                    </p>
+                </div>
             </div>
         </div>
     </section>

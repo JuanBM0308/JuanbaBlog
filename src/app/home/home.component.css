@@ -89,10 +89,6 @@ li {
 }
 
 @media (max-width: 1218px) {
-    body {
-        background-color: red;
-    }
-
     #hamburgerMenu {
         width: 10%;
         display: flex;
@@ -223,7 +219,7 @@ section {
 }
 
 /**
-* ! Estilos descripcion del proyecto
+* ! Estilos contenido home
 */
 #containerAbout {
     display: flex;
@@ -331,9 +327,20 @@ section {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
 
+.newsCard::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
+  }
+
 .newsLink {
     width: 20rem;
     height: 20rem;
+    z-index: -1;
 }
 
 .newsCard:hover {
