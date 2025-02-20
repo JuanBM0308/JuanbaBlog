@@ -1,0 +1,50 @@
+/**
+* TODO: Estilos de pagina de error 404
+*/
+#backgroundNotFound {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#imageError404 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#notFound {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-family: var(--fontTitlesPixel);
+    font-size: 5rem;
+    color: #fff;
+}
+
+h2 {
+    font-family: var(--fontNormalTitles);
+}
+
+p {
+    font-family: var(--fontNormalText);
+}
+
+#backHome {
+    font-family: var(--fontNormalText);
+    font-size: 1.3rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}

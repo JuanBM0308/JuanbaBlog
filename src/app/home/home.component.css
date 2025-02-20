@@ -86,39 +86,6 @@ section {
     color: var(--colorTitles);
 }
 
-.hoverHighlighted {
-    position: relative;
-    display: inline-block;
-}
-
-.hoverHighlighted::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1rem;
-    background-color: var(--secodaryColor);
-    z-index: -1;
-}
-
-.hoverHighlighted::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 1rem; 
-    background-color: var(--highlightColor); 
-    transition: width 0.3s ease-in-out;
-    z-index: -1;
-}
-
-.hoverHighlighted:hover::after {
-    width: 100%;
-    background-color: var(--highlightColor); 
-}
-
 /**
 * ? Noticias de software
 */
@@ -169,7 +136,7 @@ section {
     width: 100%;
     height: 40%;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
-  }
+}
 
 .newsLink {
     width: 20rem;

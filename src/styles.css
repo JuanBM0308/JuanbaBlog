@@ -21,10 +21,11 @@
     --normalText: #C8C6C3;
     --colorBehind: #818a91;
     --colorSubTitles: #F5F5F5;
+    --backgroundColorPage: #1E1E1E;
 }
 
 body {
-    background-color: #1E1E1E;
+    background-color: var(--backgroundColorPage);
 }
 
 .no-scroll {
@@ -32,4 +33,37 @@ body {
     height: 100vh;
     touch-action: none;
     overscroll-behavior: contain;
+}
+
+.hoverHighlighted {
+    position: relative;
+    display: inline-block;
+}
+
+.hoverHighlighted::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1rem;
+    background-color: var(--secodaryColor);
+    z-index: -1;
+}
+
+.hoverHighlighted::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1rem; 
+    background-color: var(--highlightColor); 
+    transition: width 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.hoverHighlighted:hover::after {
+    width: 100%;
+    background-color: var(--highlightColor); 
 }

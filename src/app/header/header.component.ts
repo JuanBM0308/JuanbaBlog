@@ -1,5 +1,6 @@
 import { Component, ElementRef, Renderer2 } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -13,21 +14,22 @@ export class HeaderComponent {
   * TODO: Navbar
   */
   menuOpen: boolean = false;
+  private audio: HTMLAudioElement;
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  constructor(private el: ElementRef, private renderer: Renderer2, private router: Router) {
+    this.audio = new Audio('assets/sounds/soundClickRetroCoin.mp3');
+  }
 
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
     const menu = this.el.nativeElement.querySelector('#containerLinks');
   
     if (this.menuOpen) {
-      // Mostrar el menú
       this.renderer.setStyle(menu, 'display', 'flex');
       this.renderer.addClass(menu, 'show-menu');
       this.renderer.removeClass(menu, 'hide-menu');
       document.body.classList.add('no-scroll');
     } else {
-      // Ocultar el menú con una animación de cierre
       this.renderer.addClass(menu, 'hide-menu');
       this.renderer.removeClass(menu, 'show-menu');
   
@@ -40,10 +42,20 @@ export class HeaderComponent {
   }
   
   /**
-  * TODO: Reprodución de sonido navbar
+  * TODO: Reprodución de sonido navbar con navegación
   */
-  playSound(event: Event): void {
-    let audio = new Audio('assets/sounds/soundClickRetroCoin.mp3');
-    audio.play().catch(error => console.error("Error reproduciendo el sonido:", error));
+  playSound(event: Event, path: string): void {
+    event.preventDefault(); 
+
+    this.audio.currentTime = 0; 
+    this.audio.play()
+      .then(() => {
+        setTimeout(() => {
+          this.router.navigateByUrl(path);
+        }, 150);
+      })
+      .catch(error => {
+        this.router.navigateByUrl(path);
+      });
   }
 }
