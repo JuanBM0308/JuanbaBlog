@@ -75,9 +75,6 @@ section {
     color: var(--highlightColor);
 }
 
-/** 
-* ? Estilo barra progresiva (resalta texto)
-*/
 #letsConnect {
     color: var(--normalText);
 }

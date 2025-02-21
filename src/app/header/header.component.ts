@@ -17,7 +17,7 @@ export class HeaderComponent {
   private audio: HTMLAudioElement;
 
   constructor(private el: ElementRef, private renderer: Renderer2, private router: Router) {
-    this.audio = new Audio('assets/sounds/soundClickRetroCoin.mp3');
+    this.audio = new Audio('assets/sounds/sound-click-retro-coin.mp3');
   }
 
   toggleMenu(): void {

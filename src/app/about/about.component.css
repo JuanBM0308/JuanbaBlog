@@ -1,0 +1,53 @@
+#titleAbout {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+h1 {
+    font-family: var(--fontNormalTitles);
+    color: var(--colorTitles);
+    font-size: 5em;
+}
+
+#descriptionAbout {
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+#photoJuanba {
+    width: 33rem;
+}
+
+#containerTextAbout {
+    margin: 2rem;
+    gap: 1rem;
+    display: flex;
+    text-align: justify;
+    flex-direction: column;
+}
+
+.normalText {
+    font-family: var(--fontNormalText);
+    color: var(--normalText);
+    font-size: 1.5em;
+}
+
+.highlight {
+    color: var(--highlightColor);
+    text-decoration: none;
+}
+
+.hoverHighlighted::before {
+    background-color: #eeeeee28;
+}
+
+.hoverHighlighted::after {
+    background-color: #98d6f53a; 
+}
+
+.hoverHighlighted:hover::after {
+    width: 100%;
+    background-color: #98d6f53a; 
+}
