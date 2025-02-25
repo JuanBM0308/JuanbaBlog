@@ -32,7 +32,7 @@ export class HeaderComponent {
     } else {
       this.renderer.addClass(menu, 'hide-menu');
       this.renderer.removeClass(menu, 'show-menu');
-  
+
       setTimeout(() => {
         this.renderer.setStyle(menu, 'display', 'none');
       }); // Ajusta el tiempo segun la animación

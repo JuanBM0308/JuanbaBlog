@@ -15,13 +15,14 @@
     * TODO: Colors
     */
     --colorTitles: #E0DED5;
-    --secodaryColor: #3A506B;
-    --detailsColor: #5C7A99;
-    --highlightColor: #4A90E2;
-    --normalText: #C8C6C3;
     --colorBehind: #818a91;
     --colorSubTitles: #F5F5F5;
     --backgroundColorPage: #1E1E1E;
+    --backgroundLigthPage: #E0DED5;
+    --detailsColor: #5C7A99;
+    --highlightColor: #4A90E2;
+    --normalText: #C8C6C3;
+    --secodaryColor: #3A506B;
 }
 
 body {

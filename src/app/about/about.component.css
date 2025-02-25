@@ -1,3 +1,6 @@
+/**
+* ! Estilos welcome
+*/
 #titleAbout {
     display: flex;
     justify-content: center;
@@ -14,6 +17,7 @@ h1 {
     margin: 2rem;
     display: flex;
     align-items: center;
+    height: 100vh;
 }
 
 #photoJuanba {
@@ -50,4 +54,141 @@ h1 {
 .hoverHighlighted:hover::after {
     width: 100%;
     background-color: #98d6f53a; 
+}
+
+@media (max-width: 1250px) {
+    #descriptionAbout {
+        flex-direction: column;
+    }
+
+    .normalText {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 700px) {
+    #photoJuanba {
+        width: 16.5rem;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+}
+
+/**
+* ! Estilos slider
+*/
+.carousel-item {
+    height: 33rem;
+    background-image: linear-gradient(
+    180deg,
+    hsl(0deg 0% 0%) 0%,
+    hsl(120deg 1% 5%) 0%,
+    hsl(120deg 1% 8%) 0%,
+    hsl(120deg 1% 9%) 1%,
+    hsl(120deg 1% 11%) 3%,
+    hsl(120deg 1% 12%) 5%,
+    hsl(120deg 1% 13%) 8%,
+    hsl(120deg 1% 14%) 14%,
+    hsl(120deg 1% 15%) 29%,
+    hsl(120deg 1% 14%) 85%,
+    hsl(120deg 1% 13%) 92%,
+    hsl(120deg 1% 12%) 95%,
+    hsl(120deg 1% 11%) 97%,
+    hsl(120deg 1% 9%) 99%,
+    hsl(120deg 1% 8%) 100%,
+    hsl(120deg 1% 5%) 100%,
+    hsl(0deg 0% 0%) 100%
+    );
+}
+
+/**
+* * Estilos desing
+*/
+#containerDesing {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+.titleSlide {
+    font-family: var(--fontNormalTitles);
+    color: var(--colorSubTitles);
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+.content {
+    height: 5rem;
+    display: flex;
+}
+
+.contentLeft {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+.titleContent {
+    font-family: var(--fontNormalTitles);
+    color: var(--normalText);
+    margin-right: 2rem;
+}
+
+.imgCheck {
+    width: 3.3rem;
+}
+
+.contentRigth {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.textContent {
+    font-family: var(--normalText);
+    color: var(--normalText);
+    font-size: large;
+    text-align: left;
+}
+
+/**
+* * Estilos frontend
+*/
+
+
+/**
+* ! Estilos extras
+*/
+#extrasAbout {
+    margin-top: 5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.subTittles {
+    font-family: var(--fontNormalTitles);
+    color: var(--colorTitles);
+    font-size: 3em;
+}
+
+.sub {
+    font-size: 2em;
+}
+
+#extrasAbout .normalText {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
 }
