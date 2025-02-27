@@ -83,9 +83,9 @@ h1 {
     height: 33rem;
     background-image: linear-gradient(
     180deg,
-    hsl(0deg 0% 0%) 0%,
-    hsl(120deg 1% 5%) 0%,
-    hsl(120deg 1% 8%) 0%,
+    hsla(0, 0%, 0%, 0.288) 0%,
+    hsla(0, 0%, 0%, 0.267) 0%,
+    hsla(0, 0%, 0%, 0.39) 0%,
     hsl(120deg 1% 9%) 1%,
     hsl(120deg 1% 11%) 3%,
     hsl(120deg 1% 12%) 5%,
@@ -97,21 +97,20 @@ h1 {
     hsl(120deg 1% 12%) 95%,
     hsl(120deg 1% 11%) 97%,
     hsl(120deg 1% 9%) 99%,
-    hsl(120deg 1% 8%) 100%,
-    hsl(120deg 1% 5%) 100%,
-    hsl(0deg 0% 0%) 100%
+    hsla(120, 2%, 8%, 0.288) 100%,
+    hsla(0, 0%, 5%, 0.288) 100%,
+    hsla(0, 0%, 0%, 0.288) 100%
     );
 }
 
 /**
-* * Estilos desing
+* * Estilos desing slider
 */
 #containerDesing {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 100%;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 }
 
 .titleSlide {
@@ -139,7 +138,6 @@ h1 {
 .titleContent {
     font-family: var(--fontNormalTitles);
     color: var(--normalText);
-    margin-right: 2rem;
 }
 
 .imgCheck {
@@ -161,9 +159,118 @@ h1 {
 }
 
 /**
-* * Estilos frontend
+* * Estilos frontend slider
 */
+#containerFrontEnd {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 7rem;
+}
 
+.containerImagesFrontEnd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imageFrontEnd {
+    width: 10rem;
+}
+
+.textContentFrontEnd {
+    text-align: center;
+    margin-top: 2em;
+}
+
+/**
+* * Estilos backend slider
+*/
+#containerBackEnd {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 5.5rem;
+}
+
+.containerImagesBackEnd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imageBackEnd {
+    width: 10rem;
+}
+
+.textContentBackEnd {
+    text-align: center;
+    margin-top: 2em;
+}
+
+/**
+* * Responsivo slider
+*/
+@media (max-width: 1162px) {
+    .imageFrontEnd {
+        width: 5rem;
+    }
+
+    .imageBackEnd {
+        width: 5rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    #containerDesing {
+        margin-bottom: 2rem;
+    }
+
+    .content {
+        height: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contentLeft {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .titleContent {
+        color: var(--highlightColor);
+    }
+
+    .contentRigth {
+        display: none;
+    }
+
+    .imgCheck {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .carousel-control-prev {
+        opacity: 0;
+    }
+
+    .carousel-control-next {
+        opacity: 0;
+    }
+
+    .imageFrontEnd {
+        width: 3.5rem;
+    }
+
+    .imageBackEnd {
+        width: 3.5rem;
+    }
+}
 
 /**
 * ! Estilos extras
