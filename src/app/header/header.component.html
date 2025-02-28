@@ -11,10 +11,10 @@
         </div>
         <div id="containerLinks" [ngClass]="{'show-menu': menuOpen, 'hide-menu': !menuOpen}" [class.active]="menuOpen">
             <ul id="principalLinks">
-                <a href="/" class="audioClick" (click)="playSound($event, '/')"><li class="linkNav">Home</li></a>
-                <a href="/about" class="audioClick" (click)="playSound($event, '/about')"><li class="linkNav">About-Me</li></a>
-                <a href="#" class="audioClick" (click)="playSound($event, '')"><li class="linkNav">Projects</li></a>
-                <a href="#" class="audioClick" (click)="playSound($event, '')"><li class="linkNav">Experience</li></a>
+                <a href="/" class="audioClick" (click)="actions($event, '/')"><li class="linkNav">Home</li></a>
+                <a href="/about" class="audioClick" (click)="actions($event, '/about')"><li class="linkNav">About-Me</li></a>
+                <a href="/projects" class="audioClick" (click)="actions($event, '/projects')"><li class="linkNav">Projects</li></a>
+                <a href="#" class="audioClick" (click)="actions($event, '')"><li class="linkNav">Experience</li></a>
             </ul>
         </div>        
     </nav>

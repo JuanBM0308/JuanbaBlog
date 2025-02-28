@@ -44,7 +44,7 @@ export class HeaderComponent {
   /**
   * TODO: Reprodución de sonido navbar con navegación
   */
-  playSound(event: Event, path: string): void {
+  actions(event: Event, path: string): void {
     event.preventDefault(); 
 
     this.audio.currentTime = 0; 

@@ -1,0 +1,55 @@
+/**
+* ! Estilos projects --tv
+*/
+#sectionTv {
+    margin: 1rem;
+}
+
+#containerTv {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #bfc2c7;
+    border-radius: 0.2rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#countermark {
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+    font-family: var(--fontTitlesPixel);
+    font-size: large;
+    font-weight: 700;
+}
+
+#screenTv {
+    width: 90%;
+    height: 100vh;
+    background-color: #636047;
+    border: 0.8rem #101211 solid;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 100px 80px -20px inset, rgba(0, 0, 0, 0.9) 0px 12px 40px -15px inset;
+    border-radius: 1rem;
+}
+
+#brandTv {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    font-family: var(--fontTitlesPixel);
+    font-size: large;
+    font-weight: 700;
+    letter-spacing: 0.4rem;
+}
+
+#options li {
+    list-style: none;
+}
+
+#options a {
+    text-decoration: none;
+}
