@@ -3,18 +3,18 @@
 */
 #sectionTv {
     margin: 1rem;
+    margin-top: 3rem;
 }
 
 #containerTv {
+    background-color: transparent;
+    box-shadow: none;
     height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #bfc2c7;
-    border-radius: 0.2rem;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 #countermark {
@@ -24,15 +24,90 @@
     font-family: var(--fontTitlesPixel);
     font-size: large;
     font-weight: 700;
+    color: var(--colorSubTitles);
 }
 
 #screenTv {
     width: 90%;
-    height: 100vh;
-    background-color: #636047;
-    border: 0.8rem #101211 solid;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 100px 80px -20px inset, rgba(0, 0, 0, 0.9) 0px 12px 40px -15px inset;
+    height: 70vh;
+    background-color: rgba(0, 0, 0, 0.02);
+    box-shadow: 
+        inset rgba(50, 50, 93, 0.15) 0px 50px 40px -10px,  
+        inset rgba(0, 0, 0, 0.7) 0px -10px 30px -12px,  
+        rgba(0, 0, 0, 0.4) 0px 5px 10px;  
     border-radius: 1rem;
+    filter: contrast(1.1) brightness(1.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    backdrop-filter: blur(5px);
+    background: linear-gradient(to top left, rgba(255, 255, 255, 0.03) 0%, rgba(0, 0, 0, 0) 50%);
+}
+
+
+#panelCli {
+    background-color: var(--secodaryColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    height: 100vh;
+}
+
+#titleMenu {
+    width: 90%;
+    border-top: 0;
+    border-bottom: 2px #fff;
+    border-left: 0;
+    border-right: 0;
+    border-style: dashed;
+    margin-bottom: 0.2rem;
+}
+
+#titleMenu h5 {
+    font-family: var(--fontOptionsTv);
+    color: var(--colorSubTitles);
+    width: 100%;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: x-large;
+}
+
+#optionsMenu {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-top: 2px #fff;
+    border-bottom: 2px #fff;
+    border-left: 0;
+    border-right: 0;
+    border-style: dashed;
+}
+
+.option {
+    text-decoration: none;
+    padding: 1rem;
+    font-family: var(--fontOptionsTv);
+    color: var(--colorSubTitles);
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.active:hover {
+    background-color: var(--colorSubTitles);
+    color: var(--secodaryColor);
+}
+
+h6 {
+    font-family: var(--fontOptionsTv);
+    color: var(--colorSubTitles);
+    margin: 1rem;
+    width: 90%;
 }
 
 #brandTv {
@@ -41,15 +116,8 @@
     justify-content: center;
     width: 90%;
     font-family: var(--fontTitlesPixel);
+    color: var(--colorSubTitles);
     font-size: large;
     font-weight: 700;
     letter-spacing: 0.4rem;
-}
-
-#options li {
-    list-style: none;
-}
-
-#options a {
-    text-decoration: none;
 }
