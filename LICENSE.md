@@ -6,7 +6,7 @@ El código fuente de este portafolio está licenciado bajo la **Licencia MIT**, 
 ```
 MIT License
 
-Copyright (c) [Año] [Tu Nombre]
+Copyright (c) 2025 Juan Sebastian Barbosa Mora
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

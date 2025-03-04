@@ -31,3 +31,93 @@
     text-align: start;
 }
 
+/**
+* ! Sections Xp
+*/
+#containerExperience {
+    margin-top: 5rem;
+}
+
+.containerContentXp {
+    display: flex;
+}
+
+.containerXpImage {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageXp {
+    width: 20rem;
+}
+
+.containerXpText {
+    padding: 5rem;
+}
+
+.descriptionText {
+    font-family: var(--fontNormalText);
+    color: var(--normalText);
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.achievementsTitle {
+    margin-top: 2rem;
+    width: 100%;
+    text-align: center;
+    font-family: var(--fontNormalText);
+    color: var(--colorTitles);
+    font-size: large;
+}
+
+.containerAchievements {
+    display: flex;
+    justify-content: space-around;
+    font-family: var(--fontNormalText);
+    color: var(--highlightColor);
+    padding: 1rem;
+}
+
+@media (max-width: 1600px) {
+    #containerExperience {
+        margin-top: 3rem;
+    }
+
+    .containerContentXp {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .containerAchievements {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 700px) {
+    .imageXp {
+        width: 15rem;
+        margin: 1rem;
+    }
+
+    .containerXpText {
+        padding: 0;
+    }
+
+    .descriptionText {
+        font-size: 1rem;
+    }
+
+    .achievementsTitle {
+        margin-top: 1rem;
+        font-size: medium;
+    }
+
+    .containerAchievements {
+        padding: 0.5rem;
+    }
+}
