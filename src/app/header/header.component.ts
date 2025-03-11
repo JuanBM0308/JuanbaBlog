@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
   /**
-  * TODO: Navbar
+  * TODO: Cambia navbar normal a hamburguesa
   */
   menuOpen: boolean = false;
   private audio: HTMLAudioElement;
@@ -42,20 +42,48 @@ export class HeaderComponent {
   }
   
   /**
-  * TODO: Reprodución de sonido navbar con navegación
+  * TODO: Prepara funciones para evento click
   */
   actions(event: Event, path: string): void {
     event.preventDefault(); 
-
-    this.audio.currentTime = 0; 
-    this.audio.play()
-      .then(() => {
-        setTimeout(() => {
-          this.router.navigateByUrl(path);
-        }, 150);
-      })
-      .catch(error => {
-        this.router.navigateByUrl(path);
-      });
+    this.playClickSound()
+      .then(() => this.navigate(path))
+      .catch(() => this.navigate(path));
   }
+  
+  /**
+  * TODO: Reproduce sonido coin navegacion
+  */
+  private playClickSound(): Promise<void> {
+    this.audio.currentTime = 0;
+    return this.audio.play();
+  }
+  
+  /**
+  * TODO: Navega dentro de los diferentes componenetes
+  */
+  private navigate(path: string): void {
+    setTimeout(() => {
+      this.router.navigateByUrl(path);
+      this.closeMenu();
+    }, 150);
+  }
+  
+  /**
+  * TODO: Cierra el menu hamburguesa
+  */
+  private closeMenu(): void {
+    this.menuOpen = false;
+    const menu = this.el.nativeElement.querySelector('#containerLinks');
+  
+    this.renderer.addClass(menu, 'hide-menu');
+    this.renderer.removeClass(menu, 'show-menu');
+  
+    setTimeout(() => {
+      this.renderer.setStyle(menu, 'display', 'none');
+    });
+  
+    document.body.classList.remove('no-scroll');
+  }  
+  
 }

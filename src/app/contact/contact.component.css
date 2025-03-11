@@ -1,0 +1,31 @@
+section {
+    margin: 2rem;
+    margin-top: 5rem;;
+}
+
+h1 {
+    font-family: var(--fontNormalTitles);
+    color: var(--colorTitles);
+    font-size: 5em;
+}
+
+#containerContactForm {
+    margin-top: 2rem;
+}
+
+#contactForm {
+    width: 100%;
+    padding: 2rem;
+    background-color: var(--backgroundLigthPage);
+    border-radius: 0.5rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#submitButton {
+    width: 100%;
+}
+
+.btn {
+    background-color: var(--highlightColor);
+    color: var(--colorSubTitles);
+}

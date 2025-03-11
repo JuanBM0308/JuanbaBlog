@@ -24,7 +24,7 @@ export class HomeComponent {
   }
 
   loadNews () {
-    this.newsService.getNews('software+technology+news', 12).subscribe({
+    this.newsService.getNews('software+technology+news', 4).subscribe({
       next: (response: any) => {
         this.news = response.articles;
         console.log(this.news);

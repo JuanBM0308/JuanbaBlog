@@ -7,16 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
-
-  /**
-  * TODO: Evitar spam correo
-  */
-  public email: string = '';
-
-  ngOnInit() {
-    const user: string = "portelnom0308";
-    const domain: string = "gmail.com";
-    this.email = `mailto:${user}@${domain}`;
-  }
   
 }

@@ -11,7 +11,7 @@ export class NewsService {
 
   constructor(private http: HttpClient) { }
 
-  getNews(query: string, pageSize: number = 12) {
+  getNews(query: string, pageSize: number = 4) {
     const url = `${this.baseUrl}?q=${query}&pageSize=${pageSize}&apiKey=${this.apiKey}`;
     return this.http.get(url);
   }
