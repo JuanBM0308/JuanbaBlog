@@ -129,3 +129,25 @@ h6 {
     font-weight: 700;
     letter-spacing: 0.4rem;
 }
+
+@media (max-width: 800px) {
+    #panelCli {
+        height: auto;
+    }
+
+    #titleMenu h5 {
+        font-size: large;
+    }
+
+    .option {
+        font-size: small;
+    }
+
+    .devicon-string {
+        font-size: medium;
+    }
+
+    h6 {
+        font-size: small;
+    }
+}
