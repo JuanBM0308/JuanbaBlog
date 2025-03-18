@@ -55,6 +55,7 @@
     align-items: center;
     padding: 1rem;
     height: 70vh;
+    width: 70%;
 }
 
 #titleMenu {
@@ -133,6 +134,7 @@ h6 {
 @media (max-width: 800px) {
     #panelCli {
         height: auto;
+        width: auto;
     }
 
     #titleMenu h5 {
