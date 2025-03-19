@@ -4,8 +4,10 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/spec",
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "types": [
-      "jasmine"
+      "jest"
     ]
   },
   "include": [
