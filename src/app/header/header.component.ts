@@ -1,11 +1,12 @@
 import { Component, ElementRef, Renderer2 } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NgOptimizedImage],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
