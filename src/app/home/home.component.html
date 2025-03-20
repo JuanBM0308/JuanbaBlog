@@ -33,7 +33,7 @@
             <div class="newsCard" *ngFor="let article of news;  let i = index">
                 <h4 class="newsTitle">{{ article.title | slice:0:50 }}...</h4>
                 <a class="newsLink" [href]="article.url" target="_blank">
-                    <img class="newsImage" [src]="article.urlToImage" alt="newsImage">
+                    <img class="newsImage" [attr.src]="article.urlToImage" alt="newsImage" loading="lazy">
                 </a>
                 <div class="loveContainer">
                     <span (click)="holdColor(i)" [class.liked]="article.liked" class="material-icons-outlined heartIcon" translate="no">

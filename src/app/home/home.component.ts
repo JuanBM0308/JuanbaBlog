@@ -27,7 +27,6 @@ export class HomeComponent {
     this.newsService.getNews('software+technology+news', 4).subscribe({
       next: (response: any) => {
         this.news = response.articles;
-        console.log(this.news);
       },
       error: (error) => {
         console.error('Error loading news:', error);

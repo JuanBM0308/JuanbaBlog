@@ -2,8 +2,8 @@ import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-spaceship-animation',
-  imports: [],
   standalone: true,
+  imports: [],
   templateUrl: './spaceship-animation.component.html',
   styleUrls: ['./spaceship-animation.component.css']
 })
