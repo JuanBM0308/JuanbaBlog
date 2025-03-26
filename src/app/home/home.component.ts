@@ -44,6 +44,8 @@ export class HomeComponent {
           article.likes = data?.count || 0; // Si no hay datos mostrar 0 likes
           article.liked = this.hasLiked(articleId); // Verificar like
           article.id = articleId; // Guardar el id en el objeto para evitar calcularlo cada vez
+
+          //console.log(response.articles);
         }
       },
       error: (error) => {
@@ -83,7 +85,8 @@ export class HomeComponent {
     // Guardar en Supabase 
     const { error } = await supabase
       .from('likes')
-      .upsert({ article_id: articleId, count: article.likes }, { onConflict: 'article_id' }).select();
+      .upsert({ article_id: articleId, count: article.likes }, { onConflict: 'article_id' })
+      .select();
 
     if (error) {
       console.error('Error al actualizar el like:', error);

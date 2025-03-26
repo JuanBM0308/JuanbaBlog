@@ -3,18 +3,18 @@
         Contact.
     </h1>
     <div id="containerContactForm">
-        <form id="contactForm">
+        <form id="contactForm" (ngSubmit)="onSubmit()">
             <div class="mb-3">
               <label for="emailUser" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="mail">
+              <input type="email" class="form-control" id="mail" [(ngModel)]="message.email" name="email">
             </div>
             <div class="mb-3">
               <label for="nameUser" class="form-label">Name</label>
-              <input type="text" class="form-control" id="name">
+              <input type="text" class="form-control" id="name" [(ngModel)]="message.user_name" name="user_name">
             </div>
             <div class="mb-3">
               <label for="messageUser" class="form-label">Message</label>
-              <textarea class="form-control" id="content" placeholder="Example: Hi dear Juan..."></textarea>
+              <textarea class="form-control" id="content" placeholder="Example: Hi dear Juan..." [(ngModel)]="message.message" name="message"></textarea>
             </div>
             <button id="submitButton" type="submit" class="btn">Submit</button>
           </form>

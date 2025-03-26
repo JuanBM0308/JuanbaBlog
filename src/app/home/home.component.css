@@ -105,8 +105,8 @@ section {
 
 #newsContainer {
     display: flex;
-    justify-content: space-between;
-    gap: 1rem;
+    justify-content: center;
+    gap: 2rem;
     margin-top: 3rem;
     flex-wrap: wrap;
     width: 90%;
@@ -114,8 +114,8 @@ section {
 
 .newsCard {
     border-radius: 0.5rem;
-    width: 20rem;
-    height: 20rem;
+    max-width: 20rem;
+    min-height: 20rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
