@@ -6,6 +6,7 @@
     padding: 20px;
     text-align: center;
     color: white;
+    min-height: 100px;
 }
 
 .footerContainer {
