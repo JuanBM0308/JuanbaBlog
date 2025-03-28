@@ -28,22 +28,38 @@ export class HomeComponent {
     this.loadNews();
   }
 
-  loadNews() {
+  loadNews(forceUpdate: boolean = false) {
+    const storedNews = localStorage.getItem('cachedNews');
+    const storedTimestamp = localStorage.getItem('newsTimestamp');
+    const tenMinutes = 10 * 60 * 1000; // 10 minutos en milisegundos
+  
+    if (!forceUpdate && storedNews && storedTimestamp) {
+      const elapsedTime = Date.now() - Number(storedTimestamp);
+      if (elapsedTime < tenMinutes) {
+        this.news = JSON.parse(storedNews);
+        return;
+      }
+    }
+  
     this.newsService.getNews().subscribe({
       next: async (articles: any[]) => {
-        this.news = articles;
+        this.news = articles; // 4 noticias aleatorias
+  
+        // Guardar nuevas noticias en localStorage
+        localStorage.setItem('cachedNews', JSON.stringify(this.news));
+        localStorage.setItem('newsTimestamp', Date.now().toString());
   
         for (let article of this.news) {
           const articleId = this.generateArticleId(article);
           const { data } = await supabase
             .from('likes')
             .select('count')
-            .eq('article_id', articleId)
+            .eq('article_id', String(articleId))
             .single();
           
-          article.likes = data?.count || 0; // Si no hay datos, mostrar 0 likes
-          article.liked = this.hasLiked(articleId); // Verificar si ya fue likeado
-          article.id = articleId; // Guardar el ID en el objeto
+          article.likes = data?.count || 0;
+          article.liked = this.hasLiked(articleId);
+          article.id = articleId;
         }
       },
       error: (error) => {
@@ -52,6 +68,12 @@ export class HomeComponent {
     });
   }
   
+  /**
+  * TODO: Renovar noticias 
+  */
+  refreshNews() {
+    this.loadNews(true);
+  }
 
   /**
   * TODO: Generar un ID único para cada artículo

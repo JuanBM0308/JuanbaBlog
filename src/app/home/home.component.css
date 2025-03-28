@@ -105,7 +105,7 @@ section {
 
 #newsContainer {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 2rem;
     margin-top: 3rem;
     flex-wrap: wrap;
@@ -217,3 +217,24 @@ section {
     }
 }
 
+/**
+* ? Estilos boton renovar noticias
+*/
+.refresh-btn {
+    font-family: var(--fontTitlesPixel);
+    margin-top: 4rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+  
+.refresh-btn:hover {
+    background: var(--colorTitles);
+    color: black;
+}
+  
