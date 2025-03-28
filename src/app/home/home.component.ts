@@ -29,10 +29,10 @@ export class HomeComponent {
   }
 
   loadNews() {
-    this.newsService.getNews('software+technology+news', 4).subscribe({
-      next: async (response: any) => {
-        this.news = response.articles;
-
+    this.newsService.getNews().subscribe({
+      next: async (articles: any[]) => {
+        this.news = articles;
+  
         for (let article of this.news) {
           const articleId = this.generateArticleId(article);
           const { data } = await supabase
@@ -41,11 +41,9 @@ export class HomeComponent {
             .eq('article_id', articleId)
             .single();
           
-          article.likes = data?.count || 0; // Si no hay datos mostrar 0 likes
-          article.liked = this.hasLiked(articleId); // Verificar like
-          article.id = articleId; // Guardar el id en el objeto para evitar calcularlo cada vez
-
-          //console.log(response.articles);
+          article.likes = data?.count || 0; // Si no hay datos, mostrar 0 likes
+          article.liked = this.hasLiked(articleId); // Verificar si ya fue likeado
+          article.id = articleId; // Guardar el ID en el objeto
         }
       },
       error: (error) => {
@@ -53,6 +51,7 @@ export class HomeComponent {
       }
     });
   }
+  
 
   /**
   * TODO: Generar un ID único para cada artículo
