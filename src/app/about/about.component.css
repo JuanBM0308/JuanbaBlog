@@ -17,7 +17,7 @@ h1 {
     margin: 2rem;
     display: flex;
     align-items: center;
-    height: 100vh;
+    height: auto;
 }
 
 #photoJuanba {
@@ -38,11 +38,17 @@ h1 {
     font-family: var(--fontNormalText);
     color: var(--normalText);
     font-size: 1.5em;
+    text-align: center;
+}
+
+.startText {
+    align-items: start;
 }
 
 .highlight {
     color: var(--highlightColor);
     text-decoration: none;
+    white-space: nowrap;
 }
 
 .hoverHighlighted::before {
@@ -83,26 +89,20 @@ h1 {
 */
 .carousel-item {
     height: 33rem;
-    background-image: linear-gradient(
-    180deg,
-    hsla(0, 0%, 0%, 0.288) 0%,
-    hsla(0, 0%, 0%, 0.267) 0%,
-    hsla(0, 0%, 0%, 0.39) 0%,
-    hsl(120deg 1% 9%) 1%,
-    hsl(120deg 1% 11%) 3%,
-    hsl(120deg 1% 12%) 5%,
-    hsl(120deg 1% 13%) 8%,
-    hsl(120deg 1% 14%) 14%,
-    hsl(120deg 1% 15%) 29%,
-    hsl(120deg 1% 14%) 85%,
-    hsl(120deg 1% 13%) 92%,
-    hsl(120deg 1% 12%) 95%,
-    hsl(120deg 1% 11%) 97%,
-    hsl(120deg 1% 9%) 99%,
-    hsla(120, 2%, 8%, 0.288) 100%,
-    hsla(0, 0%, 5%, 0.288) 100%,
-    hsla(0, 0%, 0%, 0.288) 100%
-    );
+}
+
+.slide-line {
+    
+    background-color:var(--highlightColor);
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+}
+
+.slider-arrow {
+    font-size: 3em;
+    font-family: var(--fontTitlesPixel);
+    color: var(--highlightColor);
 }
 
 /**
@@ -283,10 +283,6 @@ h1 {
         justify-content: center;
         align-items: center;
         gap: 1rem;
-    }
-
-    .titleContent {
-        color: var(--highlightColor);
     }
 
     .contentRigth {

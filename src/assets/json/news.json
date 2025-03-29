@@ -349,7 +349,7 @@
             "title": "Breaking Up with On-Call",
             "description": "This article is about why on-call in it's current state in big-tech is flawed, or how to properly develop software.",
             "url": "https://reflector.dev/articles/breaking-up-with-on-call/",
-            "urlToImage": null,
+            "urlToImage": "https://reflector.dev/articles/breaking-up-with-on-call/images/guard_tower_huf3245dea499b67369f0144bc0b9de2bd_531020_1320x0_resize_q75_h2_box_2.webp",
             "publishedAt": "2025-03-16T12:57:49Z",
             "content": "Edited on March 14th 2025: expand in the \"AI\" sectionIntroduction#\r\nThis article is about why on-call in its current state in big-tech is flawed, or how to properly develop software. Surprisingly, fr… [+10668 chars]"
         },
