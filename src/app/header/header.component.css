@@ -61,7 +61,6 @@ li {
 #principalLinks {
     display: flex;
     justify-content: space-between;
-    width: 50%;
     font-family: var(--fontTitlesPixel);
     font-size: 1.2rem;
 }

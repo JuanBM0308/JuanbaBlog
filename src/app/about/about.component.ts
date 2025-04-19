@@ -15,5 +15,5 @@ import { NgOptimizedImage } from '@angular/common';
   styleUrl: './about.component.css'
 })
 export class AboutComponent {
-
+  
 }
