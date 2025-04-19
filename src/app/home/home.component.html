@@ -1,50 +1,32 @@
 <main>
-    <section>
-        <div id="containerWelcome">
-            <div id="titleWelcome">
-                <h2 id="symbolWelcome">
+    <section id="welcomeSection">
+        <div id="welcomeContainer">
+            <div id="welcomeTitle">
+                <h2 id="welcomeSymbol">
                     >
                 </h2>
-                <h2 id="textWelcome">
+                <h2 id="welcomeText">
                     Welcome to Juanba's Blog
                 </h2>
             </div>
-            <div id="subWelcome">
-                <p>
-                    / I hope you love this website
-                </p>
-            </div>
         </div>
-        <div class="divisorLine"></div>
+        <div class="sectionDivider"></div>
     </section>
-    <section id="containerAbout">
-        <div id="aboutProject">
-            <p>Here you can learn more about me, my projects, the technologies I work with and the latest technology news. As a software developer, I love creating innovative solutions and taking on new challenges.</p>
-            <p>Feel free to explore my portfolio to check out my projects, the technologies I specialize in, and my experience in the development world. I hope you find something interesting 
+    <section id="aboutSection">
+        <div id="aboutContainer">
+            <div class="personalData">
+                <h1>Juan Sebastian Barbosa</h1>
+                <h3>Junior Full Stack Developer Angular & Java</h3>
+            </div>
+            <p class="aboutText">
+                I'm glad you're here! You'll find content based on me and my projects, including my collaborations across various industries and companies.
+                Feel free to take inspiration from this portfolio and its projects. If I've caught your attention, don't hesitate to reach out.
+            </p>
+            <div class="connectLink">
                 <a href="/contact-me" id="letsConnect">
-                    <br><span class="hoverHighlighted">let’s connect!</span>
+                    <span class="hoverHighlighted">Let’s connect!</span>
                 </a>
-            </p>            
-        </div>        
-    </section>
-    <section id="softwareNews">
-        <h2 id="titleNews">Software technology news</h2>
-        <div id="newsContainer">
-            <div class="newsCard" *ngFor="let article of news; let i = index">
-                <h4 class="newsTitle">{{ article.title | slice:0:50 }}...</h4>
-                <a class="newsLink" [href]="article.url" target="_blank">
-                    <img class="newsImage" [attr.src]="article.urlToImage" alt="newsImage" loading="lazy">
-                </a>
-                <div class="loveContainer">
-                    <span (click)="toggleLike(i)" [class.liked]="article.liked" class="material-icons-outlined heartIcon" translate="no">
-                        favorite
-                    </span>
-                    <p class="loveCounter">{{ article.likes }}</p>
-                </div>
             </div>
         </div>
-        <button (click)="refreshNews()" class="refresh-btn">
-            ¡Update news!
-        </button>
     </section>
 </main>
