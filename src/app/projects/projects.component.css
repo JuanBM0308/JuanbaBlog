@@ -2,154 +2,254 @@
 * ! Estilos projects --tv
 */
 #sectionTv {
-    margin: 1rem;
-    margin-top: 3rem;
+  margin: 1rem;
+  margin-top: 3rem;
 }
 
 #containerTv {
-    background-color: transparent;
-    box-shadow: none;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  background-color: transparent;
+  box-shadow: none;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #countermark {
-    display: flex;
-    justify-content: flex-start;
-    width: 90%;
-    font-family: var(--fontTitlesPixel);
-    font-size: large;
-    font-weight: 700;
-    color: var(--colorSubTitles);
+  display: flex;
+  justify-content: flex-start;
+  width: 90%;
+  font-family: var(--fontTitlesPixel);
+  font-size: large;
+  font-weight: 700;
+  color: var(--colorSubTitles);
 }
 
 #screenTv {
-    width: 90%;
-    height: auto;
-    background-color: rgba(0, 0, 0, 0.02);
-    box-shadow: 
-        inset rgba(50, 50, 93, 0.15) 0px 50px 40px -10px,  
-        inset rgba(0, 0, 0, 0.7) 0px -10px 30px -12px,  
-        rgba(0, 0, 0, 0.4) 0px 5px 10px;  
-    border-radius: 1rem;
-    filter: contrast(1.1) brightness(1.05);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    backdrop-filter: blur(5px);
-    background: linear-gradient(to top left, rgba(255, 255, 255, 0.03) 0%, rgba(0, 0, 0, 0) 50%);
+  width: 90%;
+  max-width: 900px;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.02);
+  box-shadow: inset rgba(50, 50, 93, 0.15) 0px 50px 40px -10px,
+    inset rgba(0, 0, 0, 0.7) 0px -10px 30px -12px,
+    rgba(0, 0, 0, 0.4) 0px 5px 10px;
+  border-radius: 1rem;
+  filter: contrast(1.1) brightness(1.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  backdrop-filter: blur(5px);
+  background: linear-gradient(
+    to top left,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(0, 0, 0, 0) 50%
+  );
+  margin-bottom: 1rem;
 }
 
-
 #panelCli {
-    background-color: var(--secodaryColor);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    height: 70vh;
-    width: 70%;
+  background-color: var(--secodaryColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+  width: 95%;
+  min-height: auto;
 }
 
 #titleMenu {
-    width: 90%;
-    border-top: 0;
-    border-bottom: 2px #fff;
-    border-left: 0;
-    border-right: 0;
-    border-style: dashed;
-    margin-bottom: 0.2rem;
+  width: 90%;
+  border-top: 0;
+  border-bottom: 2px #fff;
+  border-left: 0;
+  border-right: 0;
+  border-style: dashed;
+  margin-bottom: 1rem;
 }
 
 #titleMenu h5 {
-    font-family: var(--fontOptionsTv);
-    color: var(--colorSubTitles);
-    width: 100%;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-    font-size: x-large;
+  font-family: var(--fontOptionsTv);
+  color: var(--colorSubTitles);
+  width: 100%;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: x-large;
+  text-align: center;
 }
 
-#optionsMenu {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    border-top: 2px #fff;
-    border-bottom: 2px #fff;
-    border-left: 0;
-    border-right: 0;
-    border-style: dashed;
+#projectsGrid {
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  );
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
-.option {
-    text-decoration: none;
-    padding: 1rem;
-    font-family: var(--fontOptionsTv);
-    color: var(--colorSubTitles);
-    width: 100%;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.project-card {
+  background-color: #333;
+  color: var(--colorSubTitles);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
 }
 
-.active:hover {
-    background-color: var(--colorSubTitles);
-    color: var(--secodaryColor);
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-image {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 0.5rem 0.5rem 0 0;
+  margin-bottom: 0.5rem;
+}
+
+.project-title {
+  font-family: var(--fontOptionsTv);
+  font-size: large;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.project-description {
+  font-family: var(--fontOptionsTv);
+  font-size: small;
+  color: #ccc;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.containerDevIcons {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
 }
 
 .devicon-string {
-    padding: .2rem;
-    font-size: xx-large;
+  font-size: xx-large;
+}
+
+.devicon-string.colored {
+  color: var(--colorSubTitles);
+}
+
+.project-link-text {
+  font-family: var(--fontOptionsTv);
+  color: var(--colorSubTitles);
+  font-weight: bold;
+  text-align: right;
+  margin-top: auto;
+  font-size: small;
 }
 
 h6 {
-    font-family: var(--fontOptionsTv);
-    color: var(--colorSubTitles);
-    margin: 1rem;
-    width: 90%;
+  font-family: var(--fontOptionsTv);
+  color: var(--colorSubTitles);
+  margin: 1rem;
+  width: 90%;
+  text-align: center;
 }
 
 #brandTv {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    width: 90%;
-    font-family: var(--fontTitlesPixel);
-    color: var(--colorSubTitles);
-    font-size: large;
-    font-weight: 700;
-    letter-spacing: 0.4rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  font-family: var(--fontTitlesPixel);
+  color: var(--colorSubTitles);
+  font-size: large;
+  font-weight: 700;
+  letter-spacing: 0.4rem;
 }
 
-@media (max-width: 800px) {
-    #panelCli {
-        height: auto;
-        width: auto;
-    }
+@media (max-width: 600px) {
+  /* Ajustes para pantallas más pequeñas */
+  #titleMenu h5 {
+    font-size: large;
+  }
 
-    #titleMenu h5 {
-        font-size: large;
-    }
+  .project-card {
+    padding: 0.75rem;
+  }
 
-    .option {
-        font-size: small;
-    }
+  .project-title {
+    font-size: medium;
+  }
 
-    .devicon-string {
-        font-size: medium;
-    }
+  .project-description {
+    font-size: small;
+  }
 
-    h6 {
-        font-size: small;
-    }
+  .devicon-string {
+    font-size: x-large; /* Reduce un poco el tamaño de los iconos en móviles */
+  }
+
+  .project-link-text {
+    font-size: smaller;
+  }
+
+  h6 {
+    font-size: small;
+  }
+
+  #projectsGrid {
+    grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
+  }
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
+  /* Ajustes para tablets pequeñas */
+  #titleMenu h5 {
+    font-size: x-large;
+  }
+
+  .project-card {
+    padding: 1rem;
+  }
+
+  .project-title {
+    font-size: large;
+  }
+
+  .project-description {
+    font-size: small;
+  }
+
+  .devicon-string {
+    font-size: xx-large;
+  }
+
+  .project-link-text {
+    font-size: small;
+  }
+
+  h6 {
+    font-size: small;
+  }
+
+  #projectsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 }

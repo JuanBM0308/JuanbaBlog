@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { supabase } from '@app/services/supabase.service';
-import MD5 from 'crypto-js/md5';
+import { CommonModule } from '@angular/common'; 
 
 @Component({
   selector: 'app-home',
