@@ -6,32 +6,22 @@ import { ContactMessage } from '@app/models/contact-message.model';
   providedIn: 'root'
 })
 export class ContactService {
-
-  public message: ContactMessage;
-
-  async saveMessage(message: ContactMessage) {
-    // Guardar mensaje en supabase
+  async saveMessage(messageData: ContactMessage) {
     try {
       const { error } = await supabase
         .from('contact_messages')
-        .insert(message)
+        .insert([messageData]) 
         .select();
-  
+
       if (error) {
-        throw error; // Pasa el error al catch
+        console.error('Supabase insert error:', error);
+        throw error;
       }
-  
+
       console.log('Mensaje enviado con éxito. (service.ts)');
     } catch (error) {
-      console.error('Error al enviar el mensaje (service.ts): ', error);
-    }
-  }
-
-  constructor() {
-    this.message = {
-      user_name: 'example',
-      email: 'example@ex.com',
-      message: 'Hi Im an example message.'
+      console.error('Error en saveMessage (service.ts): ', error);
+      throw error; 
     }
   }
 }
