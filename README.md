@@ -14,8 +14,6 @@ En este proyecto, he creado un blog/portafolio personal que incluye:
 
 🧹 Buenas Prácticas: Implementación de estándares y mejores prácticas en el código.
 
-🌐 Consumo de APIs: Integración con diversas APIs para mostrar datos dinámicos.
-
 📂 Recopilado de Otros Proyectos: Muestra de otros proyectos que he realizado.
 
 📝 Información Sobre Mí: Detalles sobre mi trayectoria y experiencia profesional.
@@ -53,8 +51,6 @@ In this project, I've created a personal blog/portfolio that includes:
 🛠️ Current Technologies: Using the latest technologies in web development.
 
 🧹 Best Practices: Implementing standards and best practices in code.
-
-🌐 API Consumption: Integration with various APIs to display dynamic data.
 
 📂 Collection of Other Projects: Showcasing other projects I've completed.
 
